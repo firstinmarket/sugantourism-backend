@@ -1,0 +1,41 @@
+ .sidebar {
+     transition: all 0.3s;
+ }
+
+ .sidebar.collapsed {
+     width: 70px;
+ }
+
+ .sidebar.collapsed .nav-text {
+     display: none;
+ }
+
+ .sidebar.collapsed .logo-text {
+     display: none;
+ }
+
+ .main-content {
+     transition: all 0.3s;
+ }
+
+ .sidebar.collapsed+.main-content {
+     margin-left: 70px;
+ }
+
+ .active-nav {
+     background-color: #3b82f6;
+     color: white !important;
+ }
+
+ .active-nav:hover {
+     background-color: #3b82f6 !important;
+ }
+
+ .ck-editor__editable {
+     min-height: 200px;
+ }
+
+ .image-preview {
+     max-height: 150px;
+     object-fit: cover;
+ }
