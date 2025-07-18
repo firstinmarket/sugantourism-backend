@@ -25,7 +25,7 @@
             <main class="p-6">
                 <!-- Dashboard Section -->
                 <div id="dashboard-section" class="section-content">
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
                         <div class="bg-white rounded-lg shadow p-6">
                             <div class="flex items-center">
                                 <div class="p-3 rounded-full bg-blue-100 text-blue-600 mr-4">
@@ -45,7 +45,7 @@
                                 </div>
                                 <div>
                                     <p class="text-gray-500">New Messages</p>
-                                    <span class="text-sm font-bold">Check Now</span>
+                                   
                                 </div>
                             </div>
                             </a>
@@ -58,22 +58,12 @@
                                <a href="./testimonial.php#list_testimonial">
                                  <div>
                                     <p class="text-gray-500">Testimonials</p>
-                                    <h3 class="text-2xl font-bold">42</h3>
+                                    
                                 </div>
                                </a>
                             </div>
                         </div>
-                        <div class="bg-white rounded-lg shadow p-6">
-                            <div class="flex items-center">
-                                <div class="p-3 rounded-full bg-purple-100 text-purple-600 mr-4">
-                                    <i class="fas fa-users text-xl"></i>
-                                </div>
-                                <div>
-                                    <p class="text-gray-500">Visitors Today</p>
-                                    <h3 class="text-2xl font-bold">256</h3>
-                                </div>
-                            </div>
-                        </div>
+                       
                     </div>
 
                    <?php
@@ -83,99 +73,6 @@
                    ?>
 
                   
-
-                <!-- Gallery Management Section -->
-                <div id="gallery-section" class="section-content hidden">
-                    <div class="bg-white rounded-lg shadow p-6 mb-6">
-                        <h2 class="text-xl font-bold mb-4">Add New Gallery Item</h2>
-                        <form id="galleryForm" class="space-y-4">
-                            <div>
-                                <label class="block text-gray-700 mb-2">Category</label>
-                                <input type="text" id="galleryCategory" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="e.g., Cottages, Food, Safari">
-                            </div>
-                            <div>
-                                <label class="block text-gray-700 mb-2">Image</label>
-                                <div class="flex items-center space-x-4">
-                                    <div class="relative">
-                                        <input type="file" id="galleryImage" class="absolute inset-0 w-full h-full opacity-0 cursor-pointer" accept="image/*">
-                                        <button type="button" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">
-                                            <i class="fas fa-upload mr-2"></i>Choose Image
-                                        </button>
-                                    </div>
-                                    <div id="imagePreviewContainer" class="hidden">
-                                        <img id="imagePreview" src="#" alt="Preview" class="image-preview rounded-lg border">
-                                    </div>
-                                </div>
-                            </div>
-                            <button type="submit" class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600">
-                                <i class="fas fa-save mr-2"></i>Save Image
-                            </button>
-                        </form>
-                    </div>
-
-                    <div class="bg-white rounded-lg shadow p-6">
-                        <div class="flex justify-between items-center mb-4">
-                            <h2 class="text-xl font-bold">Gallery Items</h2>
-                            <div class="flex space-x-2">
-                                <select id="categoryFilter" class="px-3 py-1 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
-                                    <option value="">All Categories</option>
-                                    <option value="Cottages">Cottages</option>
-                                    <option value="Food">Food</option>
-                                    <option value="Safari">Safari</option>
-                                </select>
-                                <button class="bg-gray-200 text-gray-700 px-3 py-1 rounded-lg hover:bg-gray-300">
-                                    <i class="fas fa-filter"></i>
-                                </button>
-                            </div>
-                        </div>
-
-                        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" id="galleryGrid">
-                            <!-- Gallery items will be loaded here -->
-                            <div class="border rounded-lg overflow-hidden">
-                                <img src="https://via.placeholder.com/300x200" alt="Gallery Item" class="w-full h-40 object-cover">
-                                <div class="p-3">
-                                    <h3 class="font-medium">Cottages</h3>
-                                    <div class="flex justify-between mt-2">
-                                        <button class="text-blue-500 hover:text-blue-700">
-                                            <i class="fas fa-edit"></i>
-                                        </button>
-                                        <button class="text-red-500 hover:text-red-700">
-                                            <i class="fas fa-trash"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="border rounded-lg overflow-hidden">
-                                <img src="https://via.placeholder.com/300x200" alt="Gallery Item" class="w-full h-40 object-cover">
-                                <div class="p-3">
-                                    <h3 class="font-medium">Food</h3>
-                                    <div class="flex justify-between mt-2">
-                                        <button class="text-blue-500 hover:text-blue-700">
-                                            <i class="fas fa-edit"></i>
-                                        </button>
-                                        <button class="text-red-500 hover:text-red-700">
-                                            <i class="fas fa-trash"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="border rounded-lg overflow-hidden">
-                                <img src="https://via.placeholder.com/300x200" alt="Gallery Item" class="w-full h-40 object-cover">
-                                <div class="p-3">
-                                    <h3 class="font-medium">Safari</h3>
-                                    <div class="flex justify-between mt-2">
-                                        <button class="text-blue-500 hover:text-blue-700">
-                                            <i class="fas fa-edit"></i>
-                                        </button>
-                                        <button class="text-red-500 hover:text-red-700">
-                                            <i class="fas fa-trash"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
                 <!-- Contact Info Section -->
                 <div id="contact-section" class="section-content hidden">
