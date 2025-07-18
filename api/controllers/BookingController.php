@@ -34,4 +34,17 @@ class BookingController {
             echo json_encode(['error' => 'Database insert failed']);
         }
     }
+
+    public static function getBookings() {
+        try {
+            $pdo = getDB();
+            $stmt = $pdo->query("SELECT id, full_name, email, phone, package_selected, preferred_dates, created_at FROM bookings ");
+            $bookings = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+            echo json_encode(['success' => true, 'bookings' => $bookings]);
+        } catch (PDOException $e) {
+            http_response_code(500);
+            echo json_encode(['error' => 'Failed to fetch bookings']);
+        }
+    }
 }

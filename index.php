@@ -67,7 +67,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="nav-item flex items-center p-3 hover:bg-gray-700" onclick="showSection('testimonials')">
+                        <a href="#testimonials-section" class="nav-item flex items-center p-3 hover:bg-gray-700" onclick="showSection('testimonials')">
                             <i class="fas fa-star mr-3"></i>
                             <span class="nav-text">Testimonials</span>
                         </a>
@@ -89,18 +89,7 @@
             <!-- Header -->
              <header class="bg-white shadow-sm p-4 flex justify-between items-center">
                 <h1 class="text-2xl font-bold text-gray-800" id="sectionTitle">Dashboard</h1>
-                <div class="flex items-center">
-                    <div class="relative mr-4">
-                        <input type="text" placeholder="Search..." class="pl-10 pr-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500">
-                        <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
-                    </div>
-                    <div class="relative">
-                        <button class="p-2 rounded-full hover:bg-gray-100 relative">
-                            <i class="fas fa-bell text-gray-600"></i>
-                            <span class="absolute top-0 right-0 h-2 w-2 rounded-full bg-red-500"></span>
-                        </button>
-                    </div>
-                </div>
+               
             </header>
 
             <!-- Dashboard Content -->
@@ -135,10 +124,12 @@
                                 <div class="p-3 rounded-full bg-yellow-100 text-yellow-600 mr-4">
                                     <i class="fas fa-star text-xl"></i>
                                 </div>
-                                <div>
+                               <a href="">
+                                 <div>
                                     <p class="text-gray-500">Testimonials</p>
                                     <h3 class="text-2xl font-bold">42</h3>
                                 </div>
+                               </a>
                             </div>
                         </div>
                         <div class="bg-white rounded-lg shadow p-6">
@@ -154,98 +145,13 @@
                         </div>
                     </div>
 
-                    <div class="bg-white rounded-lg shadow p-6 mb-6">
-                        <h2 class="text-xl font-bold mb-4">Recent Book Messages</h2>
-                        <div class="overflow-x-auto">
-                            <table class="min-w-full divide-y divide-gray-200">
-                                <thead class="bg-gray-50">
-                                    <tr>
-                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th>
-                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Phone</th>
-                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Date</th>
-                                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="bg-white divide-y divide-gray-200">
-                                    <tr>
-                                        <td class="px-6 py-4 whitespace-nowrap">John Doe</td>
-                                        <td class="px-6 py-4 whitespace-nowrap">+1 234 567 890</td>
-                                        <td class="px-6 py-4 whitespace-nowrap">2023-06-15</td>
-                                        <td class="px-6 py-4 whitespace-nowrap">
-                                            <button class="text-blue-600 hover:text-blue-900 mr-3">View</button>
-                                            <button class="text-red-600 hover:text-red-900">Delete</button>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="px-6 py-4 whitespace-nowrap">Jane Smith</td>
-                                        <td class="px-6 py-4 whitespace-nowrap">+1 987 654 321</td>
-                                        <td class="px-6 py-4 whitespace-nowrap">2023-06-14</td>
-                                        <td class="px-6 py-4 whitespace-nowrap">
-                                            <button class="text-blue-600 hover:text-blue-900 mr-3">View</button>
-                                            <button class="text-red-600 hover:text-red-900">Delete</button>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
+                   <?php
 
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
-                        <div class="bg-white rounded-lg shadow p-6">
-                            <h2 class="text-xl font-bold mb-4">Quick Actions</h2>
-                            <div class="grid grid-cols-2 gap-4">
-                                <button onclick="showSection('gallery')" class="bg-blue-100 text-blue-700 p-4 rounded-lg hover:bg-blue-200 transition flex flex-col items-center">
-                                    <i class="fas fa-images text-2xl mb-2"></i>
-                                    <span>Add Gallery Item</span>
-                                </button>
-                                <button onclick="showSection('testimonials')" class="bg-yellow-100 text-yellow-700 p-4 rounded-lg hover:bg-yellow-200 transition flex flex-col items-center">
-                                    <i class="fas fa-star text-2xl mb-2"></i>
-                                    <span>Add Testimonial</span>
-                                </button>
-                                <button onclick="showSection('contact')" class="bg-green-100 text-green-700 p-4 rounded-lg hover:bg-green-200 transition flex flex-col items-center">
-                                    <i class="fas fa-address-book text-2xl mb-2"></i>
-                                    <span>Update Contact</span>
-                                </button>
-                                <button onclick="showSection('home')" class="bg-purple-100 text-purple-700 p-4 rounded-lg hover:bg-purple-200 transition flex flex-col items-center">
-                                    <i class="fas fa-home text-2xl mb-2"></i>
-                                    <span>Update Home</span>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="bg-white rounded-lg shadow p-6">
-                            <h2 class="text-xl font-bold mb-4">Recent Activity</h2>
-                            <div class="space-y-4">
-                                <div class="flex items-start">
-                                    <div class="bg-blue-100 text-blue-600 p-2 rounded-full mr-3">
-                                        <i class="fas fa-images"></i>
-                                    </div>
-                                    <div>
-                                        <p class="font-medium">You added 3 new images to the gallery</p>
-                                        <p class="text-sm text-gray-500">2 hours ago</p>
-                                    </div>
-                                </div>
-                                <div class="flex items-start">
-                                    <div class="bg-green-100 text-green-600 p-2 rounded-full mr-3">
-                                        <i class="fas fa-envelope"></i>
-                                    </div>
-                                    <div>
-                                        <p class="font-medium">New booking message from John Doe</p>
-                                        <p class="text-sm text-gray-500">5 hours ago</p>
-                                    </div>
-                                </div>
-                                <div class="flex items-start">
-                                    <div class="bg-yellow-100 text-yellow-600 p-2 rounded-full mr-3">
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                    <div>
-                                        <p class="font-medium">You published a new testimonial</p>
-                                        <p class="text-sm text-gray-500">Yesterday</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                   include("./components/book_messages.php")
+
+                   ?>
+
+                  
 
                 <!-- Gallery Management Section -->
                 <div id="gallery-section" class="section-content hidden">
@@ -468,109 +374,8 @@
                     </div>
                 </div>
 
-                <!-- Testimonials Section -->
-                <div id="testimonials-section" class="section-content hidden">
-                    <div class="bg-white rounded-lg shadow p-6 mb-6">
-                        <h2 class="text-xl font-bold mb-4">Add New Testimonial</h2>
-                        <form id="testimonialForm" class="space-y-4">
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div>
-                                    <label class="block text-gray-700 mb-2">Name</label>
-                                    <input type="text" id="testimonialName" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Customer Name">
-                                </div>
-                                <div>
-                                    <label class="block text-gray-700 mb-2">Location</label>
-                                    <input type="text" id="testimonialLocation" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="City, Country">
-                                </div>
-                            </div>
-                            <div>
-                                <label class="block text-gray-700 mb-2">Review Text</label>
-                                <textarea id="testimonialText" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" rows="4" placeholder="What did they say about us?"></textarea>
-                            </div>
-                            <div>
-                                <label class="block text-gray-700 mb-2">Image</label>
-                                <div class="flex items-center space-x-4">
-                                    <div class="relative">
-                                        <input type="file" id="testimonialImage" class="absolute inset-0 w-full h-full opacity-0 cursor-pointer" accept="image/*">
-                                        <button type="button" class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600">
-                                            <i class="fas fa-upload mr-2"></i>Choose Image
-                                        </button>
-                                    </div>
-                                    <div id="testimonialPreviewContainer" class="hidden">
-                                        <img id="testimonialPreview" src="#" alt="Preview" class="image-preview rounded-lg border">
-                                    </div>
-                                </div>
-                            </div>
-                            <button type="submit" class="bg-blue-500 text-white px-6 py-2 rounded-lg hover:bg-blue-600">
-                                <i class="fas fa-save mr-2"></i>Save Testimonial
-                            </button>
-                        </form>
-                    </div>
-
-                    <div class="bg-white rounded-lg shadow p-6">
-                        <h2 class="text-xl font-bold mb-4">Existing Testimonials</h2>
-                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="testimonialsGrid">
-                            <!-- Testimonials will be loaded here -->
-                            <div class="border rounded-lg p-4">
-                                <div class="flex items-center mb-3">
-                                    <img src="https://via.placeholder.com/50" alt="Customer" class="rounded-full mr-3">
-                                    <div>
-                                        <h3 class="font-bold">John Doe</h3>
-                                        <p class="text-sm text-gray-500">New York, USA</p>
-                                    </div>
-                                </div>
-                                <p class="text-gray-700 mb-3">"Amazing experience at Sugan Tourism! The cottages were cozy and the safari was unforgettable."</p>
-                                <div class="flex justify-between">
-                                    <div class="text-yellow-400">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                    </div>
-                                    <div>
-                                        <button class="text-blue-500 hover:text-blue-700 mr-2">
-                                            <i class="fas fa-edit"></i>
-                                        </button>
-                                        <button class="text-red-500 hover:text-red-700">
-                                            <i class="fas fa-trash"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="border rounded-lg p-4">
-                                <div class="flex items-center mb-3">
-                                    <img src="https://via.placeholder.com/50" alt="Customer" class="rounded-full mr-3">
-                                    <div>
-                                        <h3 class="font-bold">Jane Smith</h3>
-                                        <p class="text-sm text-gray-500">London, UK</p>
-                                    </div>
-                                </div>
-                                <p class="text-gray-700 mb-3">"The food was absolutely delicious and the staff were so friendly. Will definitely come back!"</p>
-                                <div class="flex justify-between">
-                                    <div class="text-yellow-400">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star-half-alt"></i>
-                                    </div>
-                                    <div>
-                                        <button class="text-blue-500 hover:text-blue-700 mr-2">
-                                            <i class="fas fa-edit"></i>
-                                        </button>
-                                        <button class="text-red-500 hover:text-red-700">
-                                            <i class="fas fa-trash"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </main>
-        </div>
-    </div>
+               
+                <?php include("./components/testimonial.php") ?>
 
     <!-- Message View Modal -->
     <div id="messageModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center hidden z-50">
