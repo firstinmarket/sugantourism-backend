@@ -1,4 +1,28 @@
-<div class="bg-white rounded-lg shadow p-6 mb-6">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sugan Tourism Admin Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   
+     <!-- css -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+
+    <!-- scripts -->
+    <script type="module" src="./assets/js/utility.js"></script>
+    <script type="module" src="./assets/js/script.js"></script>
+
+</head>
+
+<body class="bg-gray-100">
+   <?php include("./components/sidebar.php") ?>
+
+
+   <div class="bg-white rounded-lg shadow p-6 mb-6">
   <h2 class="text-xl font-bold mb-4">Recent Book Messages</h2>
   <div class="overflow-x-auto">
     <table class="min-w-full divide-y divide-gray-200">
@@ -56,3 +80,7 @@
 
   window.onload = loadBookings;
 </script>
+
+
+</body>
+</html>
