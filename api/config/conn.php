@@ -1,8 +1,16 @@
 <?php
+
+
+// $host = 'localhost';
+// $db   = 'sugantourism';
+// $user = 'root';
+// $pass = '';
+// $charset = 'utf8mb4';
+
 $host = 'localhost';
-$db   = 'sugantourism';
-$user = 'root';
-$pass = '';
+$db   = 'gnthealt_sugan';
+$user = 'gnthealt_sugan';
+$pass = '7@f~WFkXV6@Q_9-Q';
 $charset = 'utf8mb4';
 
 $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
