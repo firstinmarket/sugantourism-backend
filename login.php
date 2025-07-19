@@ -1,9 +1,15 @@
-
+ <?php
+session_start();
+if (isset($_SESSION['admin_id'])) {
+    header("Location: ./");
+    exit;
+}
+?>
 <!doctype html>
 <html lang="en">
 
 <head>
-    <title>Title</title>
+    <title>SuganTourism</title>
     <meta charset="utf-8" />
     <meta
         name="viewport"
@@ -51,4 +57,29 @@
     </div>
 </body>
 
+<?php include("./components/api.php")?>
+<script>
+    document.getElementById('loginForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+    try {
+        const res = await fetch('<?php echo $API; ?>adminRoutes.php', {
+            method: "POST",
+            headers: {"Content-Type":"application/json"},
+            body: JSON.stringify({username, password})
+        });
+        const result = await res.json();
+        if (result.success) {
+            alert("Login successful");
+            window.location = "./"
+        } else {
+            alert(result.error || "Login failed");
+        }
+    } catch (e) {
+        alert("Network error");
+    }
+});
+
+</script>
 </html>

@@ -1,3 +1,5 @@
+
+ 
  <div class="flex h-screen overflow-hidden">
         <!-- Sidebar -->
         <div class="sidebar bg-gray-800 text-white w-64 flex flex-col">
@@ -24,27 +26,29 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="nav-item flex items-center p-3 hover:bg-gray-700" onclick="showSection('gallery')">
+                        <a href="./gallery.php" class="nav-item flex items-center p-3 hover:bg-gray-700" onclick="showSection('gallery')">
                             <i class="fas fa-images mr-3"></i>
-                            <span class="nav-text">Gallery Management</span>
+                            <span class="nav-text">Gallery </span>
                         </a>
                     </li>
+                   
                     <li>
-                        <a href="#" class="nav-item flex items-center p-3 hover:bg-gray-700" onclick="showSection('contact')">
-                            <i class="fas fa-address-book mr-3"></i>
-                            <span class="nav-text">Contact Info</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="nav-item flex items-center p-3 hover:bg-gray-700" onclick="showSection('home')">
-                            <i class="fas fa-home mr-3"></i>
-                            <span class="nav-text">Home Gallery</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="nav-item flex items-center p-3 hover:bg-gray-700" onclick="showSection('bookings')">
+                        <a href="./bookings.php" class="nav-item flex items-center p-3 hover:bg-gray-700" onclick="showSection('bookings')">
                             <i class="fas fa-envelope mr-3"></i>
-                            <span class="nav-text">Book Messages</span>
+                            <span class="nav-text">Bookings</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="./Packages.php" class="nav-item flex items-center p-3 hover:bg-gray-700" onclick="showSection('bookings')">
+                           <i class="fa-solid fa-boxes-packing mr-3"></i>
+                            <span class="nav-text">Packages</span>
+                        </a>
+                    </li>
+
+                      <li>
+                        <a href="./Inquiries.php" class="nav-item flex items-center p-3 hover:bg-gray-700" onclick="showSection('bookings')">
+                            <i class="fa fa-question-circle mr-3"></i>
+                            <span class="nav-text">Inquiries</span>
                         </a>
                     </li>
                     <li>
@@ -53,13 +57,19 @@
                             <span class="nav-text">Testimonials</span>
                         </a>
                     </li>
+                     <li>
+                        <a href="./settings.php" class="nav-item flex items-center p-3 hover:bg-gray-700" onclick="showSection('contact')">
+                            <i class="fas fa-address-book mr-3"></i>
+                            <span class="nav-text">Settings</span>
+                        </a>
+                    </li> 
                 </ul>
             </nav>
 
             <!-- User Profile -->
             <div class="p-4 border-t border-gray-700 flex items-center">
                 
-                <a href="#" class="ml-auto text-gray-400 hover:text-white" onclick="logout()">
+                <a href="./components/logout.php" class="ml-auto text-gray-400 hover:text-white" >
                     <i class="fas fa-sign-out-alt"></i>
                 </a>
             </div>

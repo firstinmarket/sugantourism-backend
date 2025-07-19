@@ -9,10 +9,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     http_response_code(200);
     exit;
 }
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+$method=$_SERVER['REQUEST_METHOD'];
+if ($method === 'POST') {
     BookingController::Inquiry();
-} else {
+} 
+elseif ($method === 'GET') {
+    BookingController::getInquiries();
+}
+else {
     http_response_code(405);
     echo json_encode(['error' => 'Only POST allowed']);
 }

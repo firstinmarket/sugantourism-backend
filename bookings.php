@@ -1,3 +1,8 @@
+ <?php
+include("./components/session.php") ;
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,7 +28,7 @@
 
 
    <div class="bg-white rounded-lg shadow p-6 mb-6">
-  <h2 class="text-xl font-bold mb-4">Recent Book Messages</h2>
+  <h2 class="text-xl font-bold mb-4">Recent Bookings</h2>
   <div class="overflow-x-auto">
     <table class="min-w-full divide-y divide-gray-200">
       <thead class="bg-gray-50">
