@@ -23,11 +23,9 @@ include("./components/session.php") ;
 
 <body class="bg-gray-100">
     <?php include("./components/sidebar.php") ?>
-    <?php
-    $delid = isset($_GET['id']) ? intval($_GET['id']) : 0;
-    ?>
+  
     <main class="p-6">
-   <button class="bg-gray-800 p-2 rounded text-white" onclick="deletePackage(<?php echo $delid; ?>)" >
+   <button class="bg-gray-800 p-2 rounded text-white" onclick="deletePackage()" >
     Delete
    </button>
         <form id="packageForm" class="max-w-xl mx-auto bg-white rounded-lg shadow p-6 space-y-5">
@@ -222,11 +220,11 @@ include("./components/session.php") ;
 </script>
 
 <script>
-    async function deletePackage(id) {
+    async function deletePackage() {
     if (!confirm('Are you sure you want to delete this package?')) return;
 
     try {
-        const res = await fetch('<?php echo $API; ?>DeletePackages.php?id=' + id, {
+        const res = await fetch('<?php echo $API; ?>DeletePackages.php?id=<?php echo $id; ?>', {
             method: 'DELETE',
             headers: { 'Content-Type': 'application/json' }
         });
