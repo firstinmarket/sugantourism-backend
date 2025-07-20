@@ -6,7 +6,8 @@ require_once __DIR__ . '/../controllers/PackageController.php';
 
 $method = $_SERVER['REQUEST_METHOD'];
 if ($method === 'DELETE') {
-    PackageController::deletePackage($_GET['id']);
+    $id = isset($_GET['id']) ? intval($_GET['id']) : 0;
+    PackageController::deletePackage($id);
 }
 
  else {
