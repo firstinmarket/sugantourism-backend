@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', loadPackages);
     if (!confirm('Are you sure you want to delete this package?')) return;
 
     try {
-        const res = await fetch('<?php echo $API; ?>packageRoutes.php?id=' + id, {
+        const res = await fetch('<?php echo $API; ?>DeletePackages.php?id=' + id, {
             method: 'DELETE',
             headers: { 'Content-Type': 'application/json' }
         });
