@@ -83,9 +83,7 @@ async function loadPackages() {
 <a href="./updatePackage.php?id=${pkg.id}">
   <button class="p-2 rounded bg-gray-800 text-white border border-gray-800 w-full">Update</button>
 </a>
-<a onclick="deletePackage(${pkg.id})">
-  <button class="p-2 rounded bg-gray-800 text-white border border-gray-800 w-full">Delete</button>
-</a>
+
                 `;
                 container.appendChild(card);
             });
@@ -100,28 +98,6 @@ async function loadPackages() {
 document.addEventListener('DOMContentLoaded', loadPackages);
 </script>
 
-<script>
-    async function deletePackage(id) {
-    if (!confirm('Are you sure you want to delete this package?')) return;
-
-    try {
-        const res = await fetch('<?php echo $API; ?>DeletePackages.php?id=' + id, {
-            method: 'DELETE',
-            headers: { 'Content-Type': 'application/json' }
-        });
-        const result = await res.json();
-        if (result.success) {
-            alert('Package deleted successfully!');
-            loadPackages(); 
-        } else {
-            alert('Failed to delete package:\n' + (result.error || 'Unknown error'));
-        }
-    } catch (e) {
-        alert('Network/Delete error!');
-    }
-}
-
-</script>
 
 
 </body>
