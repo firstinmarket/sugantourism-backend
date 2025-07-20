@@ -200,4 +200,28 @@ public static function updatePackageImage($id) {
     }
 }
 
+  public static function deletePackage($id) {
+        if (!$id || !is_numeric($id)) {
+            http_response_code(400);
+            echo json_encode(['error' => 'Invalid package id']);
+            return;
+        }
+
+        try {
+            $pdo = getDB();
+            $stmt = $pdo->prepare("DELETE FROM packages WHERE id = ?");
+            $stmt->execute([$id]);
+
+            if ($stmt->rowCount() > 0) {
+                echo json_encode(['success' => true, 'message' => 'Review deleted']);
+            } else {
+                http_response_code(404);
+                echo json_encode(['error' => 'package not found']);
+            }
+        } catch (PDOException $e) {
+            http_response_code(500);
+            echo json_encode(['error' => 'Database delete failed']);
+        }
+    }
+
 } 

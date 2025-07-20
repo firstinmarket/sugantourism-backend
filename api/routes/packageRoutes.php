@@ -21,6 +21,9 @@ elseif ($method  === 'PUT') {
 elseif ($method  === 'PUT') {
     PackageController::updatePackageImage($_GET['id']);
 }
+elseif ($method  === 'POST') {
+    PackageController::deletePackage($_GET['id']);
+}
  else {
     http_response_code(405);
     echo json_encode(['error' => 'Method not allowed']);
